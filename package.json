@@ -1,11 +1,50 @@
 {
   "name": "deditor",
   "version": "0.1.0",
-  "description": "editor for project daily",
-  "author": "zhaojj11",
-  "main": "index.js",
+  "private": false,
+  "main": "./dist/deditor.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "vue-cli-service lint",
+    "start": "vue-cli-service serve",
+    "build": "tsc",
+    "pack": "npm pack"
   },
-  "license": "MIT"
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "core-js": "^3.6.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "ts-lint": "^4.5.1",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.61.0",
+    "vue": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "~4.1.5",
+    "lint-staged": "^9.5.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
 }

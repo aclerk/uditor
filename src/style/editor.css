@@ -1,0 +1,120 @@
+
+/* EDITOR */
+.daily_editor_redactor [contenteditable]{
+    outline: none;
+}
+
+.daily_editor_redactor {
+    position: relative;
+    outline: none;
+    margin-top:50px;
+}
+
+.daily_editor_block_content{
+    padding:10px 0;
+    margin:0 50px
+}
+
+.daily_editor_toolbar{
+    position: absolute;
+    visibility: hidden;
+    -webkit-transition: opacity .1s ease;
+    transition: opacity .1s ease;
+    will-change: opacity;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.daily_editor_toolbar.opened{
+    opacity: 1;
+    visibility: visible;
+}
+
+.daily-editor-toolbar-button{
+    color: #707684;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.daily_editor_toolbar .toggler{
+    color: #3e6dd6
+}
+.daily_editor_toolbar .toggler,
+.daily_editor_toolbar li
+{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+}
+.daily_editor_toolbar .selected,
+.daily_editor_toolbar li:hover
+{
+    background: #3e6dd6;
+    color: #e2edff;
+}
+
+.daily_editor_block_content.H1,
+.daily_editor_block_content.H2,
+.daily_editor_block_content.H3,
+.daily_editor_block_content.H4,
+.daily_editor_block_content.H5,
+.daily_editor_block_content.H6
+{
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.daily_editor_block_content.H1, .daily_editor_block_content.H2 {
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eaecef;
+}
+.daily_editor_block_content.H1{
+    font-size: 1.75em;
+}
+.daily_editor_block_content.H2{
+    font-size: 1.55em;
+}
+.daily_editor_block_content.H3{
+    font-size: 1.38em;
+}
+.daily_editor_block_content.H4{
+    font-size: 1.25em;
+}
+.daily_editor_block_content.H5{
+    font-size: 1.13em;
+}
+.daily_editor_block_content.H6{
+    font-size: 1em;
+}
+
+.daily_editor_marking{
+    display: none;
+}
+
+.daily_editor_block_active .daily_editor_marking{
+    display: inline;
+    height: auto;
+    width: auto;
+}
+
+
+
+
+

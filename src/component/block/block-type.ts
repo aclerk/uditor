@@ -5,6 +5,5 @@ export enum BlockType {
   H4 = 'H4',
   H5 = 'H5',
   H6 = 'H6',
-  Paragraph = 'Paragraph',
-  CODE = 'Code'
+  Paragraph = 'Paragraph'
 }

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import dailyEditor from '@/editor/daily-editor';
+import DEditor from '../src/deditor';
 
 export default {
   name: 'app',
@@ -16,9 +16,8 @@ export default {
   },
   methods: {},
   mounted() {
-    dailyEditor.start({
-      tools: ['text', 'heading', 'list-unordered', 'double-quotes-l', 'table-2', 'code-view', 'flow-chart', 'link'],
-      textareaId: 'daily_editor'
+    let d = new DEditor({
+      holderId: 'daily_editor'
     });
   }
 };

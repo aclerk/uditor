@@ -29,5 +29,4 @@ package-lock.json
 
 # tgz
 *.tgz
-*.js
 *.js.map

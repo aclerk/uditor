@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import DEditor from '../src/deditor';
+import Uditor from '../src/uditor';
 
 export default {
   name: 'app',
@@ -16,7 +16,7 @@ export default {
   },
   methods: {},
   mounted() {
-    let d = new DEditor({
+    let d = new Uditor({
       holderId: 'daily_editor'
     });
   }

@@ -13,7 +13,7 @@ declare const VERSION: string;
  * @license MIT
  * @author zhaojj11
  */
-export default class DEditor {
+export default class Uditor {
   public isReady: Promise<void>;
 
   public static get version(): string {

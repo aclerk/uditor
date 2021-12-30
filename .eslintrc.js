@@ -14,6 +14,7 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
+    'linebreak-style': ['error', 'windows'],
     quotes: [1, 'single'],
     semi: 1,
     '@typescript-eslint/camelcase': 0,
